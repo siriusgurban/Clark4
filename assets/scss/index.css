@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  font-size: 10px;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #000;
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+.container {
+  width: 79.2%;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.test {
+  width: 100%;
+  height: 100px;
+  background-color: #5f0a0a;
+}
+
+.header .container .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .container .row .logo {
+  font-size: 2.4rem;
+  font-weight: 900;
+}
+.header .container .row .logo a {
+  color: #fff;
+}
+.header .container .row .nav .nav_list {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+.header .container .row .nav .nav_list .nav_item {
+  padding: 1.7rem 2rem;
+}
+.header .container .row .nav .nav_list .nav_item a {
+  position: relative;
+  color: #fff;
+  transition: all ease 0.3s;
+}
+.header .container .row .nav .nav_list .nav_item a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.2rem;
+  background-color: #FFBD39;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+  transform-origin: center;
+  transform: scale(0);
+  transform-origin: center;
+}
+.header .container .row .nav .nav_list .nav_item a:hover::after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.hero {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, 0);
+}
+.hero .container .hero_content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.hero .container .hero_content .hero_left {
+  width: 39%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+.hero .container .hero_content .hero_left .hero_suptitle {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #FFBD39;
+}
+.hero .container .hero_content .hero_left .hero_title {
+  font-size: 6rem;
+  font-weight: 800;
+  line-height: 7.2rem;
+  color: #fff;
+}
+.hero .container .hero_content .hero_left .hero_title span {
+  color: #FFBD39;
+}
+.hero .container .hero_content .hero_left .hero_subtitle {
+  font-size: 3rem;
+  font-weight: 400;
+  color: #fff;
+}
+.hero .container .hero_content .hero_left .hero_btns {
+  display: flex;
+  gap: 0.5rem;
+  white-space: nowrap;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.hero .container .hero_content .hero_left .hero_btns .hero_btn {
+  background-color: #FFBD39;
+  color: #000;
+  border: none;
+  border-radius: 4rem;
+  padding: 1.8rem 2.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.hero .container .hero_content .hero_right {
+  width: 58%;
+}
+.hero .container .hero_content .hero_right .hero_img img {
+  width: 100%;
+}/*# sourceMappingURL=index.css.map */

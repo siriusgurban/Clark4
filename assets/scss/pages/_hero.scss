@@ -1,0 +1,68 @@
+@use "../variables";
+@use "../mixins";
+
+.hero {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, 0);
+  .container {
+    .hero_content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+
+      .hero_left {
+        width: 39%;
+        display: flex;
+        flex-direction: column;
+        gap: 1.8rem;
+        .hero_suptitle {
+          font-size: 1.4rem;
+          font-weight: 600;
+          color: variables.$orange;
+        }
+        .hero_title {
+          font-size: 6rem;
+          font-weight: 800;
+          line-height: 7.2rem;
+          color: variables.$white;
+          span {
+            color: variables.$orange;
+          }
+        }
+
+        .hero_subtitle {
+          font-size: 3rem;
+          font-weight: 400;
+          color: variables.$white;
+        }
+
+        .hero_btns {
+          display: flex;
+          gap: 0.5rem;
+          white-space: nowrap;
+          font-size: 1.2rem;
+          font-weight: 600;
+          .hero_btn {
+            @include mixins.primaryBtn(variables.$orange, variables.$black);
+            // &.btn_primary {
+            //   border: 1px solid grey;
+            //   @include mixins.primaryBtn(variables.$black, variables.$white);
+          }
+        }
+      }
+
+      .hero_right {
+        width: 58%;
+        .hero_img img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
