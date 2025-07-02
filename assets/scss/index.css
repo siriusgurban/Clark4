@@ -116,19 +116,47 @@ body.no-scroll {
 .hero .container .hero_content .hero_left .hero_btns {
   display: flex;
   gap: 0.5rem;
-  white-space: nowrap;
-  font-size: 1.2rem;
-  font-weight: 600;
 }
 .hero .container .hero_content .hero_left .hero_btns .hero_btn {
   background-color: #FFBD39;
   color: #000;
-  border: none;
   border-radius: 4rem;
-  padding: 1.8rem 2.5rem;
+  padding: 1.6rem 2.5rem;
   font-size: 1.2rem;
   font-weight: 600;
+  text-transform: uppercase;
+  white-space: nowrap;
+  line-height: 18px;
+  letter-spacing: 2px;
+  transition: all 0.3s;
+  border: 1px solid transparent;
   cursor: pointer;
+}
+.hero .container .hero_content .hero_left .hero_btns .hero_btn:hover {
+  background-color: #000;
+  color: #FFBD39;
+  border: 1px solid #FFBD39;
+}
+.hero .container .hero_content .hero_left .hero_btns .hero_btn.btn_secondary {
+  background-color: #000;
+  color: #fff;
+  border-radius: 4rem;
+  padding: 1.6rem 2.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  white-space: nowrap;
+  line-height: 18px;
+  letter-spacing: 2px;
+  transition: all 0.3s;
+  border: 1px solid transparent;
+  cursor: pointer;
+  border: 1px solid grey;
+}
+.hero .container .hero_content .hero_left .hero_btns .hero_btn.btn_secondary:hover {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #000;
 }
 .hero .container .hero_content .hero_right {
   width: 58%;

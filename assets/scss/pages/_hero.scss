@@ -45,14 +45,12 @@
         .hero_btns {
           display: flex;
           gap: 0.5rem;
-          white-space: nowrap;
-          font-size: 1.2rem;
-          font-weight: 600;
           .hero_btn {
             @include mixins.primaryBtn(variables.$orange, variables.$black);
-            // &.btn_primary {
-            //   border: 1px solid grey;
-            //   @include mixins.primaryBtn(variables.$black, variables.$white);
+            &.btn_secondary {
+              @include mixins.primaryBtn(variables.$black, variables.$white);
+              border: 1px solid grey;
+            }
           }
         }
       }
