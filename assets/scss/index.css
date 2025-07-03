@@ -440,6 +440,91 @@ body.no-scroll {
   border: 1px solid #FFBD39;
 }
 
+.services {
+  position: relative;
+  padding-top: 8rem;
+  padding-bottom: 12.8rem;
+}
+.services .services_bg_title {
+  font-size: 10rem;
+  font-weight: 900;
+  position: absolute;
+  z-index: -1;
+  top: 9rem;
+  left: 42%;
+  color: rgba(255, 255, 255, 0.062745098);
+}
+.services .container .row {
+  flex-direction: column;
+  align-items: center;
+  gap: 6rem;
+}
+.services .container .row .services_title {
+  font-size: 5rem;
+  font-weight: 700;
+  color: #fff;
+}
+.services .container .row .services_subtitle {
+  max-width: 90rem;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2.9rem;
+  color: #979797;
+}
+.services .container .row .services_wrap {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 3rem;
+}
+.services .container .row .services_wrap .services_box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 31.5%;
+  border-radius: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.062745098);
+  padding-top: 3.2rem;
+  padding-bottom: 6.5rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.services .container .row .services_wrap .services_box .services_box_title {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  font-weight: 500;
+  line-height: 1.7rem;
+  letter-spacing: 0.3rem;
+}
+.services .container .row .services_wrap .services_box .services_box_ul {
+  width: 3rem;
+  height: 0.1rem;
+  background-color: #FFBD39;
+}
+.services .container .row .services_wrap .services_box:hover {
+  background-color: #FFBD39;
+  transition: all 0.3s ease;
+}
+.services .container .row .services_wrap .services_box:hover .services_box_image {
+  height: 100%;
+  border-radius: 50%;
+  background-color: #000;
+}
+.services .container .row .services_wrap .services_box:hover .services_box_image img {
+  color: #fff;
+}
+.services .container .row .services_wrap .services_box:hover .services_box_title {
+  color: #000;
+}
+.services .container .row .services_wrap .services_box:hover .services_box_ul {
+  background-color: #000;
+  transition: all 0.3s ease;
+}
+
 .footer .container .row {
   flex-direction: column;
 }

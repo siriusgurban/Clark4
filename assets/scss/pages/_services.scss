@@ -1,0 +1,91 @@
+@use "../variables" as variables;
+@use "../mixins";
+
+.services {
+  position: relative;
+  padding-top: 8rem;
+  padding-bottom: 12.8rem;
+  .services_bg_title {
+    font-size: 10rem;
+    font-weight: 900;
+    position: absolute;
+    z-index: -1;
+    top: 9rem;
+    left: 42%;
+    color: variables.$lightBlack;
+  }
+  .container {
+    .row {
+      flex-direction: column;
+      align-items: center;
+      gap: 6rem;
+      .services_title {
+        font-size: 5rem;
+        font-weight: 700;
+        color: variables.$white;
+      }
+      .services_subtitle {
+        max-width: 90rem;
+        text-align: center;
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 2.9rem;
+        color: variables.$grey;
+      }
+
+      .services_wrap {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 3rem;
+        .services_box {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 1rem;
+          width: 31.5%;
+          border-radius: 0.5rem;
+          background-color: variables.$lightBlack;
+          padding-top: 3.2rem;
+          padding-bottom: 6.5rem;
+          transition: all 0.3s ease;
+          cursor: pointer;
+
+          .services_box_title {
+            color: variables.$white;
+            text-transform: uppercase;
+            font-size: 1.3rem;
+            font-weight: 500;
+            line-height: 1.7rem;
+            letter-spacing: 0.3rem;
+          }
+          .services_box_ul {
+            width: 3rem;
+            height: 0.1rem;
+            background-color: variables.$orange;
+          }
+        }
+        .services_box:hover {
+          background-color: variables.$orange;
+          transition: all 0.3s ease;
+          .services_box_image {
+            height: 100%;
+            border-radius: 50%;
+            background-color: variables.$black;
+            img {
+              color: variables.$white;
+            }
+          }
+          .services_box_title {
+            color: variables.$black;
+          }
+          .services_box_ul {
+            background-color: variables.$black;
+            transition: all 0.3s ease;
+          }
+        }
+      }
+    }
+  }
+}
