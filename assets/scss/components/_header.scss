@@ -1,10 +1,51 @@
 @use "../variables";
 @use "../mixins";
 
-.test {
-  width: 100%;
-  height: 100px;
-  background-color: variables.$primerColor;
+@media (max-width: 992px) {
+  .header {
+    padding-top: 0;
+    margin-top: 0;
+    position: sticky;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    .container {
+      .row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        #hamburger {
+          display: block;
+        }
+        .side_nav {
+          display: none;
+          height: 100%;
+          width: 100%;
+          transition: top 0.3s ease;
+          background-color: variables.$black;
+
+          .nav_list {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 2.6rem;
+            font-weight: 300;
+            .nav_item {
+              padding: 0;
+              a {
+                font-size: 1.6rem;
+              }
+            }
+          }
+        }
+        .nav.side-nav.active {
+          display: block;
+        }
+      }
+    }
+  }
 }
 
 .header {
@@ -20,7 +61,9 @@
         }
       }
       .nav {
-
+        .close_btn {
+          display: none;
+        }
         .nav_list {
           display: flex;
           justify-content: space-between;
@@ -28,6 +71,11 @@
           font-weight: 400;
           .nav_item {
             padding: 1.7rem 2rem;
+            &.nav_active {
+              a {
+                color: variables.$orange;
+              }
+            }
             a {
               position: relative;
               color: variables.$white;
@@ -55,6 +103,13 @@
             }
           }
         }
+      }
+      .hamburger {
+        font-size: 2rem;
+        padding: 1.2rem;
+        cursor: pointer;
+        display: none;
+        color: variables.$white;
       }
     }
   }

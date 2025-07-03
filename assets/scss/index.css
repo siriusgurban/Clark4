@@ -32,12 +32,49 @@ body.no-scroll {
   width: 100%;
 }
 
-.test {
-  width: 100%;
-  height: 100px;
-  background-color: #5f0a0a;
+@media (max-width: 992px) {
+  .header {
+    padding-top: 0;
+    margin-top: 0;
+    position: sticky;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+  }
+  .header .container .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .header .container .row #hamburger {
+    display: block;
+  }
+  .header .container .row .side_nav {
+    display: none;
+    height: 100%;
+    width: 100%;
+    transition: top 0.3s ease;
+    background-color: #000;
+  }
+  .header .container .row .side_nav .nav_list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2.6rem;
+    font-weight: 300;
+  }
+  .header .container .row .side_nav .nav_list .nav_item {
+    padding: 0;
+  }
+  .header .container .row .side_nav .nav_list .nav_item a {
+    font-size: 1.6rem;
+  }
+  .header .container .row .nav.side-nav.active {
+    display: block;
+  }
 }
-
 .header .container .row {
   justify-content: space-between;
   align-items: center;
@@ -49,6 +86,9 @@ body.no-scroll {
 .header .container .row .logo a {
   color: #fff;
 }
+.header .container .row .nav .close_btn {
+  display: none;
+}
 .header .container .row .nav .nav_list {
   display: flex;
   justify-content: space-between;
@@ -57,6 +97,9 @@ body.no-scroll {
 }
 .header .container .row .nav .nav_list .nav_item {
   padding: 1.7rem 2rem;
+}
+.header .container .row .nav .nav_list .nav_item.nav_active a {
+  color: #FFBD39;
 }
 .header .container .row .nav .nav_list .nav_item a {
   position: relative;
@@ -80,6 +123,13 @@ body.no-scroll {
 .header .container .row .nav .nav_list .nav_item a:hover::after {
   opacity: 1;
   transform: scale(1);
+}
+.header .container .row .hamburger {
+  font-size: 2rem;
+  padding: 1.2rem;
+  cursor: pointer;
+  display: none;
+  color: #fff;
 }
 
 .hero {
@@ -294,6 +344,100 @@ body.no-scroll {
   background-color: #fff;
   color: #000;
   border: 1px solid #000;
+}
+
+.resume {
+  position: relative;
+  padding-top: 8rem;
+  padding-bottom: 12.8rem;
+}
+.resume .resume_bg_title {
+  font-size: 10rem;
+  font-weight: 900;
+  position: absolute;
+  z-index: -1;
+  top: 9rem;
+  left: 42%;
+  color: rgba(255, 255, 255, 0.062745098);
+}
+.resume .container .row {
+  flex-direction: column;
+  align-items: center;
+  gap: 6rem;
+}
+.resume .container .row .resume_title {
+  font-size: 5rem;
+  font-weight: 700;
+  color: #fff;
+}
+.resume .container .row .resume_subtitle {
+  max-width: 90rem;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2.9rem;
+  color: #979797;
+}
+.resume .container .row .resume_wrap {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 3rem;
+}
+.resume .container .row .resume_wrap .resume_box {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 48.5%;
+  border-radius: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.062745098);
+  padding: 3.5rem 4rem 5rem 3rem;
+}
+.resume .container .row .resume_wrap .resume_box .resume_box_year {
+  color: #FFBD39;
+  font-size: 2.6rem;
+  font-weight: 900;
+  line-height: 4.7rem;
+}
+.resume .container .row .resume_wrap .resume_box .resume_box_title {
+  color: #fff;
+  font-size: 2.6rem;
+  font-weight: 400;
+  line-height: 3.9rem;
+}
+.resume .container .row .resume_wrap .resume_box .resume_box_subtitle {
+  color: #979797;
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 2.2rem;
+}
+.resume .container .row .resume_wrap .resume_box .resume_box_desc {
+  color: #979797;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2.9rem;
+}
+.resume .container .row .resume_btn {
+  background-color: #FFBD39;
+  color: #000;
+  border-radius: 4rem;
+  padding: 1.6rem 2.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  white-space: nowrap;
+  line-height: 18px;
+  letter-spacing: 2px;
+  transition: all 0.3s;
+  border: 1px solid transparent;
+  cursor: pointer;
+  padding: 2.5rem 5rem;
+}
+.resume .container .row .resume_btn:hover {
+  background-color: #000;
+  color: #FFBD39;
+  border: 1px solid #FFBD39;
 }
 
 .footer .container .row {
