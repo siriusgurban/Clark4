@@ -174,19 +174,23 @@ body.no-scroll {
   width: 100%;
 }
 
-.about .container {
+.about {
   position: relative;
 }
-.about .container .about_bg_title {
+.about .about_bg_title {
   font-size: 10rem;
   font-weight: 900;
   position: absolute;
-  top: 50px;
-  left: 50%;
-  color: rgba(0, 0, 0, 0.062745098);
+  z-index: -1;
+  top: 1rem;
+  left: 48.5%;
+  color: rgba(62, 62, 62, 0.5647058824);
+}
+.about .container .row {
+  gap: 2rem;
 }
 .about .container .row .about_image {
-  width: 50%;
+  width: 45%;
 }
 .about .container .row .about_image img {
   width: 100%;
@@ -194,10 +198,10 @@ body.no-scroll {
      object-fit: contain;
 }
 .about .container .row .about_content {
-  width: 50%;
+  width: 55%;
   display: flex;
   flex-direction: column;
-  gap: 4.4rem;
+  gap: 3.5rem;
 }
 .about .container .row .about_content .about_title {
   font-size: 5rem;
@@ -218,6 +222,16 @@ body.no-scroll {
   line-height: 2.9rem;
   color: #fff;
 }
+.about .container .row .about_content .about_info .about_info_list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+.about .container .row .about_content .about_info .about_info_list_desc {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
 .about .container .row .about_content .about_info .about_info_list_desc .about_info_item {
   font-size: 1.6rem;
   font-weight: 400;
@@ -234,9 +248,53 @@ body.no-scroll {
   color: #fff;
 }
 .about .container .row .about_content .about_project {
+  color: #fff;
   font-size: 2rem;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 3.6rem;
+}
+.about .container .row .about_content .about_project span {
+  color: #FFBD39;
+}
+.about .container .row .about_content .hero_btns .hero_btn {
+  background-color: #FFBD39;
+  color: #000;
+  border-radius: 4rem;
+  padding: 1.6rem 2.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  white-space: nowrap;
+  line-height: 18px;
+  letter-spacing: 2px;
+  transition: all 0.3s;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+.about .container .row .about_content .hero_btns .hero_btn:hover {
+  background-color: #000;
+  color: #FFBD39;
+  border: 1px solid #FFBD39;
+}
+.about .container .row .about_content .hero_btns .hero_btn.btn_secondary {
+  background-color: #000;
+  color: #fff;
+  border-radius: 4rem;
+  padding: 1.6rem 2.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  white-space: nowrap;
+  line-height: 18px;
+  letter-spacing: 2px;
+  transition: all 0.3s;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+.about .container .row .about_content .hero_btns .hero_btn.btn_secondary:hover {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #000;
 }
 
 .grid_gallery {
